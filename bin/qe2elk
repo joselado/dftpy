@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+
+import sys
+import os
+sys.path.append(os.environ["DFTPYROOT"]) # library
+
+import structure
+
+if len(sys.argv)>1: name = sys.argv[1] # name of the file
+else: name = "qe.in"
+
+print("Reading Quantum Espresso input from ",name)
+st = structure.read_qe("qe.in") # read Quantum Espresso structure
+structure.write_elk(st) # write Elk structure
+print("Written elk.in")

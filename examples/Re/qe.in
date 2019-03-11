@@ -1,0 +1,48 @@
+&CONTROL
+!                 restart_mode = 'restart' ,
+                 calculation = 'scf' ,
+                 tstress = .true. ,
+                 verbosity = 'high' ,
+                   wf_collect = .TRUE. ,
+                  pseudo_dir='/share/inl/pseudopotentials/'
+/
+ &SYSTEM
+                       ibrav = 0
+                   celldm(1) = 1.0 ,
+                         nat = 2 ,
+                         ntyp = 1 ,
+                     ecutwfc = 60 ,
+                     ecutrho = 600 ,
+                 occupations = 'smearing' ,
+                     degauss = 0.002 ,
+!                     nspin = 2 ,
+!                     lda_plus_u = .true. ,
+!                     lda_plus_u_kind = 0 ,
+!                     Hubbard_U(1) = 7.0 ,
+!                     starting_magnetization(1) = 1 ,
+/
+ &ELECTRONS
+          startingwfc = 'atomic'
+ !                                diagonalization = 'cg' ,
+!                         diago_full_acc = .TRUE.
+                 mixing_mode = 'local-TF' ,
+/
+ &IONS
+            ion_dynamics = 'damp'
+/
+ &CELL
+    cell_dynamics = 'damp-w'
+
+/
+CELL_PARAMETERS alat
+  5.21890337  0.00000000  0.00000000
+  -2.60945169  4.51970290  0.00000000
+  0.00000000  0.00000000  8.42759920
+ATOMIC_SPECIES
+   Re  1.000000   
+ATOMIC_POSITIONS crystal
+  Re  0.33333333  0.66666669  0.25000000
+  Re  0.66666662  0.33333332  0.74999997
+K_POINTS automatic
+   3 3 3   1 1 1
+

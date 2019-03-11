@@ -1,0 +1,12 @@
+
+Elk code version 5.2.10 started
+
+Number of CPUs per MPI process :    8
+Number of OpenMP threads per MPI process :    1
+Nested OpenMP : T
+Maximum active nested levels :          4
+OpenMP dynamic thread adjustment : F
+
+Info(elk): current task :      0
+
+Elk code stopped

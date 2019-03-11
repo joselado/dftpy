@@ -1,0 +1,15 @@
+
+Elk code version 5.2.10 started
+
+Number of CPUs per MPI process :    8
+Number of OpenMP threads per MPI process :    1
+Nested OpenMP : T
+Maximum active nested levels :          4
+OpenMP dynamic thread adjustment : F
+
+Info(elk): current task :      0
+Info(findsymcrys): atomic basis shift (lattice) :
+  0.3750000000      0.3750000000      0.3750000000    
+See GEOMETRY.OUT for new atomic positions
+
+Elk code stopped

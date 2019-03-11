@@ -1,0 +1,62 @@
+&CONTROL
+!                 restart_mode = 'restart' ,
+                 calculation = 'scf' ,
+                 tstress = .true. ,
+                 verbosity = 'high' ,
+                   wf_collect = .TRUE. ,
+                  pseudo_dir='/share/inl/pseudopotentials/'
+/
+ &SYSTEM
+                       ibrav = 0
+                   celldm(1) = 1.0 ,
+                         nat = 14 ,
+                         ntyp = 3 ,
+                     ecutwfc = 60 ,
+                     ecutrho = 600 ,
+                 occupations = 'smearing' ,
+                     degauss = 0.002 ,
+!                     nspin = 2 ,
+!                     lda_plus_u = .true. ,
+!                     lda_plus_u_kind = 0 ,
+!                     Hubbard_U(1) = 7.0 ,
+!                     starting_magnetization(1) = 1 ,
+/
+ &ELECTRONS
+          startingwfc = 'atomic'
+ !                                diagonalization = 'cg' ,
+!                         diago_full_acc = .TRUE.
+                 mixing_mode = 'local-TF' ,
+/
+ &IONS
+            ion_dynamics = 'damp'
+/
+ &CELL
+    cell_dynamics = 'damp-w'
+
+/
+CELL_PARAMETERS alat
+  10.76032083  0.00000000  0.00000000
+  5.38016042  9.31871119  0.00000000
+  5.38016042  3.10623706  8.78576517
+ATOMIC_SPECIES
+   Co  1.000000   
+   Al  1.000000   
+   O  1.000000   
+ATOMIC_POSITIONS crystal
+  Co  0.00000000  0.00000000  0.00000000
+  Co  0.24999997  0.24999997  0.24999997
+  Al  0.62499988  0.62499988  0.62499988
+  Al  0.62499988  0.62499988  0.12499998
+  Al  0.62499988  0.12499998  0.62499988
+  Al  0.12499998  0.62499988  0.62499988
+  O  0.37499994  0.37499994  0.37499994
+  O  0.37499994  0.37499994  0.87499988
+  O  0.37499994  0.87499988  0.37499994
+  O  0.87499988  0.37499994  0.37499994
+  O  0.87499988  0.87499988  0.37499994
+  O  0.87499988  0.87499988  0.87499988
+  O  0.87499988  0.37499994  0.87499988
+  O  0.37499994  0.87499988  0.87499988
+K_POINTS automatic
+   3 3 3   1 1 1
+

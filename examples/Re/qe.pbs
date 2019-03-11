@@ -1,0 +1,13 @@
+#!/bin/sh
+#PBS -l nodes=1:ppn=12
+#PBS -l walltime=1:24:24:00
+#PBS -N parallel-qe-QE
+#PBS -m e
+#PBS -M xxx@inl.int
+
+module load intel
+module load openmpi-icc
+
+#cat $PBS_NODEFILE
+cd $PBS_O_WORKDIR
+mpirun --wdir $PBS_O_WORKDIR -x OMP_NUM_THREADS=1 --bind-to-core --bycore pw.x -input qe.in > qe.out

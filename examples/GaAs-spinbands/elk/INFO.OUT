@@ -1,0 +1,190 @@
++----------------------------+
+| Elk version 5.2.10 started |
++----------------------------+
+
+Date (YYYY-MM-DD) : 2018-06-08
+Time (hh:mm:ss)   : 13:10:07
+
+All units are atomic (Hartree, Bohr, etc.)
+
++------------------------------------------+
+| Ground-state run resuming from STATE.OUT |
++------------------------------------------+
+
+Lattice vectors :
+   5.600000000       5.600000000       0.000000000    
+   5.600000000       0.000000000       5.600000000    
+   0.000000000       5.600000000       5.600000000    
+
+Reciprocal lattice vectors :
+  0.5609986881      0.5609986881     -0.5609986881    
+  0.5609986881     -0.5609986881      0.5609986881    
+ -0.5609986881      0.5609986881      0.5609986881    
+
+Unit cell volume      :    351.2320000    
+Brillouin zone volume :   0.7062289696    
+
+Species :    1 (Ga)
+ parameters loaded from : Ga.in
+ name : gallium
+ nuclear charge    :   -31.00000000    
+ electronic charge :    31.00000000    
+ atomic mass :    127097.2538    
+ muffin-tin radius :    2.399871131    
+ number of radial points in muffin-tin :    497
+ number on inner part of muffin-tin    :    349
+ atomic positions (lattice), magnetic fields (Cartesian) :
+   1 :   0.00000000  0.00000000  0.00000000    0.00000000  0.00000000  0.00000000
+
+Species :    2 (As)
+ parameters loaded from : As.in
+ name : arsenic
+ nuclear charge    :   -33.00000000    
+ electronic charge :    33.00000000    
+ atomic mass :    136573.7219    
+ muffin-tin radius :    2.399871131    
+ number of radial points in muffin-tin :    497
+ number on inner part of muffin-tin    :    349
+ atomic positions (lattice), magnetic fields (Cartesian) :
+   1 :   0.25000000  0.25000000  0.25000000    0.00000000  0.00000000  0.00000000
+
+Total number of atoms per unit cell :    2
+
+Spin treatment :
+ spin-polarised
+ spin-orbit coupling
+ global magnetic field (Cartesian) :    0.000000000       0.000000000       0.000000000    
+ non-collinear magnetisation
+
+Number of Bravais lattice symmetries :   48
+Number of crystal symmetries         :   24
+Crystal has no inversion symmetry
+Complex Hermitian eigensolver will be used
+
+k-point grid :      1     1     1
+k-point offset :    1.000000000       1.000000000       1.000000000    
+k-point set is reduced with full crystal symmetry group
+Total number of k-points :        1
+
+Muffin-tin radius times maximum |G+k| :    7.000000000    
+ using average radius
+Maximum |G+k| for APW functions       :    2.916823287    
+Maximum (1/2)|G+k|^2                  :    4.253929044    
+Maximum |G| for potential and density :    12.00000000    
+Constant for pseudocharge density :    7
+Radial integration step length :    4
+
+G-vector grid sizes :     32    32    32
+Number of G-vectors :    10177
+
+Maximum angular momentum used for
+ APW functions                      :    7
+ outer part of muffin-tin           :    7
+ inner part of muffin-tin           :    1
+
+Total nuclear charge    :   -64.00000000    
+Total core charge       :    36.00000000    
+Total valence charge    :    28.00000000    
+Total excess charge     :    0.000000000    
+Total electronic charge :    64.00000000    
+
+Effective Wigner radius, r_s :    1.094229699    
+
+Number of empty states         :    8
+Total number of valence states :   46
+Total number of core states    :   36
+
+Total number of local-orbitals :   29
+
+Exchange-correlation functional :     20     0     0
+ Perdew-Burke-Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+ Generalised gradient approximation (GGA)
+
+Smearing type :    3
+ Fermi-Dirac
+Smearing width :   0.1000000000E-02
+Effective electronic temperature (K) :    315.7750425    
+
+Mixing type :    3
+ Broyden mixing, J. Phys. A: Math. Gen. 17, L317 (1984)
+
+Potential read in from STATE.OUT
+
++------------------------------+
+| Self-consistent loop started |
++------------------------------+
+
++--------------------+
+| Loop number :    1 |
++--------------------+
+
+Reached self-consistent loops maximum
+
+Energies :
+ Fermi                       :     0.129460887349    
+ sum of eigenvalues          :     -2424.71057290    
+ electron kinetic            :      4291.27466377    
+ core electron kinetic       :      3978.34684419    
+ Coulomb                     :     -8343.60639152    
+ Coulomb potential           :     -6508.06271827    
+ nuclear-nuclear             :     -416.116131403    
+ electron-nuclear            :     -9346.91780196    
+ Hartree                     :      1419.42754184    
+ Madelung                    :     -5089.57503238    
+ xc potential                :     -207.922518401    
+ xc effective B-field        :    -0.254188481517E-10
+ external B-field            :     -0.00000000000    
+ exchange                    :     -156.750898958    
+ correlation                 :     -3.10593644142    
+ electron entropic           :    -0.277288507439E-02
+ total energy                :     -4212.19133603    
+ (external B-field energy excluded from total)
+
+Density of states at Fermi energy :    1000.023671    
+ (states/Hartree/unit cell)
+
+Estimated indirect band gap :   0.1344256153E-05
+ from k-point      1 to k-point      1
+Estimated direct band gap   :   0.1344256153E-05
+ at k-point      1
+
+Charges :
+ core                        :    36.00000000    
+ valence                     :    28.00000000    
+ interstitial                :    2.376046474    
+ muffin-tins (core leakage)
+  species :    1 (Ga)
+   atom    1                 :    29.63353376     (  0.7567042637E-03)
+  species :    2 (As)
+   atom    1                 :    31.99041976     (  0.1428150067E-03)
+ total in muffin-tins        :    61.62395353    
+ total calculated charge     :    63.98366079    
+ total charge                :    64.00000000    
+ error                       :   0.1633921449E-01
+
+Moments :
+ interstitial                :  -0.7269204818E-20 -0.8817522656E-20 -0.2318541368E-20
+ muffin-tins
+  species :    1 (Ga)
+   atom    1                 :  -0.1177805885E-20 -0.1179850115E-20  0.1860160891E-22
+  species :    2 (As)
+   atom    1                 :   0.1336194438E-21  0.4873348583E-21  0.5794816790E-22
+ total in muffin-tins        :  -0.1044186441E-20 -0.6925152565E-21  0.7654977681E-22
+ total moment                :  -0.8313391259E-20 -0.9510037913E-20 -0.2241991591E-20
+
++------------------------------+
+| Self-consistent loop stopped |
++------------------------------+
+
+Timings (CPU seconds) :
+ initialisation                        :         0.97
+ Hamiltonian and overlap matrix set up :         0.01
+ first-variational eigenvalue equation :         0.01
+ second-variational calculation        :         0.07
+ charge density calculation            :         0.05
+ potential calculation                 :         0.11
+ total                                 :         1.22
+
++----------------------------+
+| Elk version 5.2.10 stopped |
++----------------------------+

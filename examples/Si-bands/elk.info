@@ -1,0 +1,23 @@
+
+Elk code version 5.2.10 started
+
+Number of CPUs per MPI process :    8
+Number of OpenMP threads per MPI process :    1
+Nested OpenMP : T
+Maximum active nested levels :          4
+OpenMP dynamic thread adjustment : F
+
+Info(elk): current task :     20
+Info(findsymcrys): atomic basis shift (lattice) :
+  0.3750000000      0.3750000000      0.3750000000    
+See GEOMETRY.OUT for new atomic positions
+Info(bandstr):      1 of      1 k-points
+
+Info(bandstr):
+ band structure plot written to BAND.OUT
+
+ Fermi energy is at zero in plot
+
+ vertex location lines written to BANDLINES.OUT
+
+Elk code stopped
