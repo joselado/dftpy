@@ -221,9 +221,12 @@ def write_elk(dictin,path=""):
   
   # spin spiral calculation
   if check("spiral"):
-      w("spinsprl\n.true.\n\n") # spin spiral calculation
-      q = dictin["qspiral"] 
-      w("vqlss\n"+str(q[0])+"  "+str(q[1])+"  "+str(q[2])+"\n")
+      if dictin["spiral"]:
+         w("spinsprl\n.true.\n\n") # spin spiral calculation
+         q = dictin["qspiral"] 
+         w("vqlss\n"+str(q[0])+"  "+str(q[1])+"  "+str(q[2])+"\n")
+  if check("append"): # stuff to append
+      w(dictin["append"]) # write everything else
 
 
 

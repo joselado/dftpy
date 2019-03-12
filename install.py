@@ -29,5 +29,7 @@ pwd = os.getcwd() # current directory
 os.chdir("src/dftpy/codes") # go to folder
 os.system("rm -f elk") # remove symbolic link
 os.system("ln -s "+get_parent("elk")+"/../ elk")
+os.system("rm -f qe") # remove symbolic link
+os.system("ln -s "+get_parent("pw.x")+"/../ qe")
 
 

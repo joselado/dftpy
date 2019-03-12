@@ -19,9 +19,9 @@ st = get_struct() # silicon structure
 # quantum espresso
 import matplotlib.pyplot as plt
 c1 = calculations.Calculation(st,code="QE") # create a DFT calculation
-es1,ds1 = c1.dos(nk=8) # get bandstructure
+es1,ds1 = c1.dos(nk=8) # get DOS
 c2 = calculations.Calculation(st,code="Elk") # create a DFT calculation
-es2,ds2 = c2.dos(nk=8) # get bandstructure
+es2,ds2 = c2.dos(nk=8) # get DOS
 plt.plot(es1,ds1,label="QE")
 plt.plot(es2,ds2,label="Elk")
 plt.legend()

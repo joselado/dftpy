@@ -34,6 +34,8 @@ class Calculation():
     self.fermi = 0.0 # Fermi energy
     self.spiral = False # spin spiral calculation
     self.qspiral = [0.,0.,0.] # qvector for spin spiral
+    self.energyerror = 1e-5 # error in total SCF energy (in eV)
+    self.options = dict() # create dictionary
     os.system("mkdir -p dfttmp") # create the directory
   def get_options(self): return get_options(self)
   def copy(self): return deepcopy(self)
@@ -130,6 +132,10 @@ def get_options(c):
   opt["kmesh"] = c.kmesh
   opt["elkpath"] = elkpath
   opt["spiral"] = c.spiral
+  if c.code=="Elk":
+      from . import elkinput
+      opt["append"] = elkinput.generate_input(c.options) # additional
+      opt["append"] += elkinput.extract_attributes(c) # additional
   return opt
 
 
