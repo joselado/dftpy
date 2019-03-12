@@ -42,6 +42,17 @@ class Structure():
     self.a3 = np.array([0.,0.,1.])
     self.atoms = [] # empty list with the atoms
     self.species = [] # species
+  def replace_atom(self,name0,name1):
+      """
+      Replace one kind of atom
+      """
+      out = [] # empty list
+      for a in self.atoms:
+          a2 = a # store
+          if a2.name==name0: a2.name = name1
+          out.append(a2)
+      self.atoms = out # store
+      self.get_species()
   def get_species(self):
     self.species = [] # initialize
     for a in self.atoms:

@@ -3,7 +3,7 @@ import sys
 sys.path.append("../../src") # library
 import numpy as np
 
-import structure
+from dftpy import structure
 
 
 def get_struct(s=5.2):
@@ -16,7 +16,7 @@ def get_struct(s=5.2):
 
 st = get_struct() # silicon structure
 
-import calculations # calculations module
+from dftpy import calculations # calculations module
 c = calculations.Calculation(st) # create a DFT calculation
 #c.spin = True
 c.code = "QE"

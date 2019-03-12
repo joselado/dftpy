@@ -3,7 +3,7 @@ import sys
 sys.path.append("../../src") # library
 import numpy as np
 
-import structure
+from dftpy import structure
 
 
 def get_struct(s=9.3/2.0):
@@ -15,7 +15,7 @@ def get_struct(s=9.3/2.0):
 
 st = get_struct() # silicon structure
 
-import calculations # calculations module
+from dftpy import calculations # calculations module
 
 # quantum espresso
 c1 = calculations.Calculation(st,code="Elk",soc=False) # create a DFT calculation
