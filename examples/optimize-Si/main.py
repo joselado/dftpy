@@ -18,5 +18,6 @@ from dftpy import calculations # calculations module
 from dftpy import optimize
 
 st = get_struct() # get the structure
-c = calculations.Calculation(st) # create a DFT calculation
+calculations.cores = 4
+c = calculations.Calculation(st,code="Elk") # create a DFT calculation
 c = optimize.volume(c) # optimize the volume

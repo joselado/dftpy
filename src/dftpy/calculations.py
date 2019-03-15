@@ -5,9 +5,10 @@ import numpy as np
 from . import klist
 from . import elkio
 from . import qeio
+from . import launchdft
 from copy import deepcopy
 
-cores = 5
+cores = 1
 
 dftpath = os.path.dirname(os.path.realpath(__file__)) 
 
@@ -95,17 +96,18 @@ def run_elk(c):
   """Perform an Elk calculation"""
 #  os.system("export OMP_NUM_THREADS="+str(cores)) # cores
   os.chdir(c.path) # go to that path
-  os.system(elkpath+"/elk elk.in > elk.info") # run the calculation
+  launchdft.runelk("elk.in","elk.out")
   os.chdir(c.originalpath)
 #  os.system("export OMP_NUM_THREADS="+str(cores)) # cores
 
 
 
 def run_qe(c):
-  """Perform an Elk calculation"""
+  """Perform a QE calculation"""
 #  os.system("export OMP_NUM_THREADS="+str(cores)) # cores
   os.chdir(c.path) # go to that path
-  os.system(qepath+"/pw.x < qe.in > qe.out") # run the calculation
+  launchdft.runqe("pw.x","qe.in","qe.out")
+#  os.system(qepath+"/pw.x < qe.in > qe.out") # run the calculation
   os.chdir(c.originalpath)
 #  os.system("export OMP_NUM_THREADS="+str(cores)) # cores
 
